@@ -1,0 +1,49 @@
+html, body {
+	height: 100%;
+}
+[editable], [textfield], [select_editable]{
+	text-decoration: none;
+	cursor:pointer;
+	color: #428bca;
+	border-bottom: dashed 1px #428bca;
+}
+[editable]:empty:after, [textfield]:empty:after, [select_editable]:empty:after{
+	font-style: italic;
+	color: #DD1144;
+	text-decoration: none;
+	content: 'Not set';
+}
+[editable]:hover {
+	text-decoration: none;
+}
+a{
+	text-decoration: none;
+}
+input, select, textarea {
+	vertical-align: top;
+}
+input + [editable], select+ [editable], textarea+ [editable] {
+	display: none;
+}
+.editable-block {
+	display: inline-block;
+}
+.btn {
+	margin-left: 5px;
+}
+.editable-error {
+	color: #a94442;
+	margin-left: 5px;
+}
+.select{
+	display: none;
+}
+.btn {
+	width: 100px;
+	height: 50px;
+	background: blue;
+	color: #fff;
+}
+#remove {
+	background: red;
+}
