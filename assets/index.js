@@ -29,7 +29,6 @@ isSquare(26);
 
 function getCount(str) {
   var vowelsCount = 0;
-  console.log(str);
   var vowels = 'aeiou';
   
   return vowelsCount;
@@ -56,15 +55,23 @@ getCount('lorem ipsum');
 
 function digPow(n, p){
   var arr = n.toString().split('');
-    console.log(arr);
-    var arrNew = [];
+  var arrNew = [];
 
-    for(var i=0; i<arr.length; i++) {
-      arrNew.push(Math.pow(arr[i], (i+1)));
-
-    }
+  for(var i=0, p; i<arr.length; i++, p++) {
+    arrNew.push(Math.pow(arr[i], p));
+  }
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  var sumPow = arrNew.reduce(reducer);
+  if(sumPow % n == 0){
+    return sumPow / n;
+  }
+  else {
+    return -1;
+  };
 }
-digPow(23,1);
+digPow(89,1);
+digPow(92,1);
+digPow(46288, 3);
 
 
 
